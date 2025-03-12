@@ -1,0 +1,2133 @@
+<template>
+    <create-form @onSubmit="submit">
+
+        <div class="col-12">
+            <div class="base_tabs beneficiary_tabs">
+                <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-beneficiary-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-beneficiary" type="button" role="tab"
+                            aria-controls="pills-beneficiary" aria-selected="true">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="svg_icon icon icon-tabler icons-tabler-outline icon-tabler-user-scan">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M10 9a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                    <path d="M4 8v-2a2 2 0 0 1 2 -2h2" />
+                                    <path d="M4 16v2a2 2 0 0 0 2 2h2" />
+                                    <path d="M16 4h2a2 2 0 0 1 2 2v2" />
+                                    <path d="M16 20h2a2 2 0 0 0 2 -2v-2" />
+                                    <path d="M8 16a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2" />
+                                </svg>
+                            </div>
+                            <div class="text">
+                                <h4 class="title">Beneficiary</h4>
+                            </div>
+                            <svg fill="#70BB4B" viewBox="-6.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <title>dropdown</title>
+                                    <path
+                                        d="M18.813 11.406l-7.906 9.906c-0.75 0.906-1.906 0.906-2.625 0l-7.906-9.906c-0.75-0.938-0.375-1.656 0.781-1.656h16.875c1.188 0 1.531 0.719 0.781 1.656z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-education-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-education" type="button" role="tab" aria-controls="pills-education"
+                            aria-selected="false">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="svg_icon icon icon-tabler icons-tabler-outline icon-tabler-brand-samsungpass">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M4 10m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                    <path d="M7 10v-1.862c0 -2.838 2.239 -5.138 5 -5.138s5 2.3 5 5.138v1.862" />
+                                    <path
+                                        d="M10.485 17.577c.337 .29 .7 .423 1.515 .423h.413c.323 0 .633 -.133 .862 -.368a1.27 1.27 0 0 0 .356 -.886c0 -.332 -.128 -.65 -.356 -.886a1.203 1.203 0 0 0 -.862 -.368h-.826a1.2 1.2 0 0 1 -.861 -.367a1.27 1.27 0 0 1 -.356 -.886c0 -.332 .128 -.651 .356 -.886a1.2 1.2 0 0 1 .861 -.368h.413c.816 0 1.178 .133 1.515 .423" />
+                                </svg>
+                            </div>
+                            <div class="text">
+                                <h4 class="title">Education</h4>
+                            </div>
+                            <svg fill="#70BB4B" viewBox="-6.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <title>dropdown</title>
+                                    <path
+                                        d="M18.813 11.406l-7.906 9.906c-0.75 0.906-1.906 0.906-2.625 0l-7.906-9.906c-0.75-0.938-0.375-1.656 0.781-1.656h16.875c1.188 0 1.531 0.719 0.781 1.656z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-occupation-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-occupation" type="button" role="tab" aria-controls="pills-occupation"
+                            aria-selected="false">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="svg_icon icon icon-tabler icons-tabler-outline icon-tabler-brand-samsungpass">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M4 10m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                    <path d="M7 10v-1.862c0 -2.838 2.239 -5.138 5 -5.138s5 2.3 5 5.138v1.862" />
+                                    <path
+                                        d="M10.485 17.577c.337 .29 .7 .423 1.515 .423h.413c.323 0 .633 -.133 .862 -.368a1.27 1.27 0 0 0 .356 -.886c0 -.332 -.128 -.65 -.356 -.886a1.203 1.203 0 0 0 -.862 -.368h-.826a1.2 1.2 0 0 1 -.861 -.367a1.27 1.27 0 0 1 -.356 -.886c0 -.332 .128 -.651 .356 -.886a1.2 1.2 0 0 1 .861 -.368h.413c.816 0 1.178 .133 1.515 .423" />
+                                </svg>
+                            </div>
+                            <div class="text">
+                                <h4 class="title">Occupations</h4>
+                            </div>
+                            <svg fill="#70BB4B" viewBox="-6.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <title>dropdown</title>
+                                    <path
+                                        d="M18.813 11.406l-7.906 9.906c-0.75 0.906-1.906 0.906-2.625 0l-7.906-9.906c-0.75-0.938-0.375-1.656 0.781-1.656h16.875c1.188 0 1.531 0.719 0.781 1.656z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-family-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-family" type="button" role="tab" aria-controls="pills-family"
+                            aria-selected="false">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="svg_icon icon icon-tabler icons-tabler-outline icon-tabler-brand-samsungpass">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M4 10m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                    <path d="M7 10v-1.862c0 -2.838 2.239 -5.138 5 -5.138s5 2.3 5 5.138v1.862" />
+                                    <path
+                                        d="M10.485 17.577c.337 .29 .7 .423 1.515 .423h.413c.323 0 .633 -.133 .862 -.368a1.27 1.27 0 0 0 .356 -.886c0 -.332 -.128 -.65 -.356 -.886a1.203 1.203 0 0 0 -.862 -.368h-.826a1.2 1.2 0 0 1 -.861 -.367a1.27 1.27 0 0 1 -.356 -.886c0 -.332 .128 -.651 .356 -.886a1.2 1.2 0 0 1 .861 -.368h.413c.816 0 1.178 .133 1.515 .423" />
+                                </svg>
+                            </div>
+                            <div class="text">
+                                <h4 class="title">Family</h4>
+                            </div>
+                            <svg fill="#70BB4B" viewBox="-6.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <title>dropdown</title>
+                                    <path
+                                        d="M18.813 11.406l-7.906 9.906c-0.75 0.906-1.906 0.906-2.625 0l-7.906-9.906c-0.75-0.938-0.375-1.656 0.781-1.656h16.875c1.188 0 1.531 0.719 0.781 1.656z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-health-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-health" type="button" role="tab" aria-controls="pills-health"
+                            aria-selected="false">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="svg_icon icon icon-tabler icons-tabler-outline icon-tabler-brand-samsungpass">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M4 10m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                    <path d="M7 10v-1.862c0 -2.838 2.239 -5.138 5 -5.138s5 2.3 5 5.138v1.862" />
+                                    <path
+                                        d="M10.485 17.577c.337 .29 .7 .423 1.515 .423h.413c.323 0 .633 -.133 .862 -.368a1.27 1.27 0 0 0 .356 -.886c0 -.332 -.128 -.65 -.356 -.886a1.203 1.203 0 0 0 -.862 -.368h-.826a1.2 1.2 0 0 1 -.861 -.367a1.27 1.27 0 0 1 -.356 -.886c0 -.332 .128 -.651 .356 -.886a1.2 1.2 0 0 1 .861 -.368h.413c.816 0 1.178 .133 1.515 .423" />
+                                </svg>
+                            </div>
+                            <div class="text">
+                                <h4 class="title">Health</h4>
+                            </div>
+                            <svg fill="#70BB4B" viewBox="-6.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <title>dropdown</title>
+                                    <path
+                                        d="M18.813 11.406l-7.906 9.906c-0.75 0.906-1.906 0.906-2.625 0l-7.906-9.906c-0.75-0.938-0.375-1.656 0.781-1.656h16.875c1.188 0 1.531 0.719 0.781 1.656z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-wealth-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-wealth" type="button" role="tab" aria-controls="pills-wealth"
+                            aria-selected="false">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="svg_icon icon icon-tabler icons-tabler-outline icon-tabler-brand-samsungpass">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M4 10m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                    <path d="M7 10v-1.862c0 -2.838 2.239 -5.138 5 -5.138s5 2.3 5 5.138v1.862" />
+                                    <path
+                                        d="M10.485 17.577c.337 .29 .7 .423 1.515 .423h.413c.323 0 .633 -.133 .862 -.368a1.27 1.27 0 0 0 .356 -.886c0 -.332 -.128 -.65 -.356 -.886a1.203 1.203 0 0 0 -.862 -.368h-.826a1.2 1.2 0 0 1 -.861 -.367a1.27 1.27 0 0 1 -.356 -.886c0 -.332 .128 -.651 .356 -.886a1.2 1.2 0 0 1 .861 -.368h.413c.816 0 1.178 .133 1.515 .423" />
+                                </svg>
+                            </div>
+                            <div class="text">
+                                <h4 class="title">Wealth</h4>
+                            </div>
+                            <svg fill="#70BB4B" viewBox="-6.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <title>dropdown</title>
+                                    <path
+                                        d="M18.813 11.406l-7.906 9.906c-0.75 0.906-1.906 0.906-2.625 0l-7.906-9.906c-0.75-0.938-0.375-1.656 0.781-1.656h16.875c1.188 0 1.531 0.719 0.781 1.656z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-asset-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-asset" type="button" role="tab" aria-controls="pills-asset"
+                            aria-selected="false">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="svg_icon icon icon-tabler icons-tabler-outline icon-tabler-brand-samsungpass">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M4 10m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                    <path d="M7 10v-1.862c0 -2.838 2.239 -5.138 5 -5.138s5 2.3 5 5.138v1.862" />
+                                    <path
+                                        d="M10.485 17.577c.337 .29 .7 .423 1.515 .423h.413c.323 0 .633 -.133 .862 -.368a1.27 1.27 0 0 0 .356 -.886c0 -.332 -.128 -.65 -.356 -.886a1.203 1.203 0 0 0 -.862 -.368h-.826a1.2 1.2 0 0 1 -.861 -.367a1.27 1.27 0 0 1 -.356 -.886c0 -.332 .128 -.651 .356 -.886a1.2 1.2 0 0 1 .861 -.368h.413c.816 0 1.178 .133 1.515 .423" />
+                                </svg>
+                            </div>
+                            <div class="text">
+                                <h4 class="title">Asset</h4>
+                            </div>
+                            <svg fill="#70BB4B" viewBox="-6.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <title>dropdown</title>
+                                    <path
+                                        d="M18.813 11.406l-7.906 9.906c-0.75 0.906-1.906 0.906-2.625 0l-7.906-9.906c-0.75-0.938-0.375-1.656 0.781-1.656h16.875c1.188 0 1.531 0.719 0.781 1.656z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-liabilities-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-liabilities" type="button" role="tab"
+                            aria-controls="pills-liabilities" aria-selected="false">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="svg_icon icon icon-tabler icons-tabler-outline icon-tabler-brand-samsungpass">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M4 10m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                    <path d="M7 10v-1.862c0 -2.838 2.239 -5.138 5 -5.138s5 2.3 5 5.138v1.862" />
+                                    <path
+                                        d="M10.485 17.577c.337 .29 .7 .423 1.515 .423h.413c.323 0 .633 -.133 .862 -.368a1.27 1.27 0 0 0 .356 -.886c0 -.332 -.128 -.65 -.356 -.886a1.203 1.203 0 0 0 -.862 -.368h-.826a1.2 1.2 0 0 1 -.861 -.367a1.27 1.27 0 0 1 -.356 -.886c0 -.332 .128 -.651 .356 -.886a1.2 1.2 0 0 1 .861 -.368h.413c.816 0 1.178 .133 1.515 .423" />
+                                </svg>
+                            </div>
+                            <div class="text">
+                                <h4 class="title">Liabilities</h4>
+                            </div>
+                            <svg fill="#70BB4B" viewBox="-6.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <title>dropdown</title>
+                                    <path
+                                        d="M18.813 11.406l-7.906 9.906c-0.75 0.906-1.906 0.906-2.625 0l-7.906-9.906c-0.75-0.938-0.375-1.656 0.781-1.656h16.875c1.188 0 1.531 0.719 0.781 1.656z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade active show" id="pills-beneficiary" role="tabpanel"
+                        aria-labelledby="pills-beneficiary-tab" tabindex="0">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <Fieldset>
+                                    <template v-slot:name>Beneficiary primary info</template>
+                                    <template v-slot:content>
+                                        <Input v-model="data.full_name" field="data.full_name"
+                                            title="Beneficiary Full Name" :req="true" col="3 col-lg" />
+                                        <Input v-model="data.name_bangla" field="data.name_bangla"
+                                            title="Beneficiary Bangla Name " :req="true" col="3" />
+                                        <!-- <Input v-model="data.beneficiary_no" field="data.beneficiary_no"
+                                            title="Beneficiary No " :req="false" col="3" /> -->
+                                        <date-picker id="date10" field="search_data.date_of_birth" name="date_of_birth"
+                                            v-model="data.date_of_birth" title="Date of Birth" placeholder="dd/mm/yyyy"
+                                            :req="false" col="3" label="From Date"></date-picker>
+                                        <Input v-model="data.nid" field="data.nid" title="NID" :req="true" col="3" />
+                                        <Input v-model="data.birth_certificate_no" field="data.birth_certificate_no"
+                                            title="Birth Certification No" :req="false" col="3" />
+                                        <Input v-model="data.mobile_no" field="data.mobile_no" title="Mobile No"
+                                            :req="true" col="3" />
+                                        <Input v-model="data.email" field="data.email" title="Email" :req="false"
+                                            col="3" />
+                                           
+                                        <div class="col-lg-3">
+                                        <Radio v-model="data.gender" field="data.gender" title="Gender" :list="[
+                                        { value: 'male', title: 'Male' },
+                                        { value: 'female', title: 'Female' },
+                                        { value: 'others', title: 'Others' },
+                                        ]" :req="true" col="12" />
+                                        </div>
+
+                                <div class="col-3">
+                                <Radio  v-model="data.marital_status" field="data.marital_status"
+                                    title="Marital Status" :list="[
+                                        { value: 'married', title: 'Married' },
+                                        { value: 'unmarried', title: 'Unmarried' },
+                                        { value: 'divorced', title: 'Divorced' },
+                                    ]" :req="true" col="12" />
+                               
+                                </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <div class="input-group position-relative">
+                                                    <Textarea title="Remarks)" field="data.remarks"
+                                                        v-model="data.remarks" :req="false" col="12" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <File title="Upload Profile Image" field="data.original_image" mime="img"
+                                            fileClassName="file2" accept=".jpg, .jpeg, .png" :showCrop="true" :vHeight="$root.media_validators?.profile?.min_height ?? 600
+                                                " :vWidth="$root.media_validators?.profile?.min_width ?? 600
+                                                    " :vSizeInKb="$root.media_validators?.profile?.max_size ?? 5000
+                                                        " col="3" />
+                                        <GlobalCrop field="data.original_image"
+                                            v-on:update:modelValue="data.original_image = $event"
+                                            :image="image.original_image" :aspectRatio="{
+                                                aspectRatio:
+                                                    ($root.media_validators?.profile?.min_width ??
+                                                        600) /
+                                                    ($root.media_validators?.profile?.min_height ??
+                                                        600),
+                                            }" :minWidth="$root.media_validators?.profile?.min_width ?? 600
+                                                " :minHeight="$root.media_validators?.profile?.min_height ?? 600
+                                                    "></GlobalCrop>
+                                        <File title="Birth Certificate" field="data.birth_certificate" mime=".pdf"
+                                            fileClassName="data.birth_certificate" :req="false" col="3"
+                                            vSizeInKb="10240" vType="pdf" />
+
+                                    </template>
+                                </Fieldset>
+                            </div>
+                            <div class="col-12">
+                                <Fieldset>
+                                    <template v-slot:name>Beneficiary Present address info</template>
+                                    <template v-slot:content>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class="input-group position-relative">
+                                                    <Textarea title="Present Address" field="data.present_address"
+                                                        v-model="data.present_address" :req="false" col="12" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <Select title="Present State" field="data.pre_state_id" :req="true"
+                                            v-model="data.pre_state_id" label="name" :reduce="(obj) => obj.id"
+                                            :options="preStates" placeholder="--Select One--" :closeOnSelect="true"
+                                            col="3" @update:modelValue="getpreDistrictByState(data.pre_state_id)" />
+                                        <Select title="Present District" field="data.pre_district_id" :req="true"
+                                            v-model="data.pre_district_id" label="name" :reduce="(obj) => obj.id"
+                                            :options="preDistricts" placeholder="--Select One--" :closeOnSelect="true"
+                                            col="3" :disabled="!data.pre_state_id"
+                                            @update:modelValue="getpreUpazilaByDistrict(data.pre_district_id)" />
+                                        <Select title="Present Upazila" field="data.pre_upazilla_id" :req="true"
+                                            v-model="data.pre_upazilla_id" label="name" :reduce="(obj) => obj.id"
+                                            :options="preUpazillas" placeholder="--Select One--" :closeOnSelect="true"
+                                            col="3" />
+                                        <div class="col-md-3">
+                                            <div class="form-group mt-4">
+                                                <div class="input-group d-flex flex-nowrap align-items-start">
+                                                    <input class="opacity-1 me-2 mt-1" checked="checked" type="checkbox"
+                                                        v-model="data.block" @change="updatePermanentAddress" col="3" />
+                                                    <span>Permanent address will be same as present
+                                                        address</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </Fieldset>
+                            </div>
+                            <div class="col-12">
+                                <Fieldset>
+                                    <template v-slot:name>Beneficiary Permanent address info</template>
+                                    <template v-slot:content>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class="input-group position-relative">
+                                                    <Textarea title="Permanent Address" field="data.permanent_address"
+                                                        v-model="data.permanent_address" :req="false" col="12" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <Select title="Permanent State" field="data.per_state_id" :req="true"
+                                            v-model="data.per_state_id" label="name" :reduce="(obj) => obj.id"
+                                            :options="perStates" placeholder="--Select One--" :closeOnSelect="true"
+                                            col="3" @update:modelValue="getperDistrictByState(data.per_state_id)" />
+                                        <Select title="Permanent District" field="data.per_district_id" :req="true"
+                                            v-model="data.per_district_id" label="name" :reduce="(obj) => obj.id"
+                                            :options="perDistricts" placeholder="--Select One--" :closeOnSelect="true"
+                                            col="3" @update:modelValue="getperUpazilaByDistrict(data.per_district_id)" />
+                                        <Select title="Permanent Upazila" field="data.per_upazilla_id" :req="true"
+                                            v-model="data.per_upazilla_id" label="name" :reduce="(obj) => obj.id"
+                                            :options="perUpazillas" placeholder="--Select One--" :closeOnSelect="true"
+                                            col="3" />
+                                    </template>
+                                </Fieldset>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Section -->
+
+                    <div class="tab-pane fade" id="pills-education" role="tabpanel"
+                        aria-labelledby="pills-education-tab" tabindex="0">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="multiple_options_create table-responsive">
+                                    <table class="table table-bordered mb-0 mt-0">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 40px">SL</th>
+                                                <th style="min-width: 250px">Exam</th>
+                                                <th>Board</th>
+                                                <th>Institute</th>
+                                                <th>Result</th>
+                                                <th style="min-width: 120px">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody v-for="(education, educationIndex) in data.beneficiary_educations"
+                                            :key="`education_${educationIndex}`">
+                                            <tr>
+                                                <td><span>{{ educationIndex + 1 }}</span></td>
+                                                <!-- Auto increment row number -->
+                                                <td>
+                                                    <Select v-model="education.exam_id"
+                                                        field="beneficiary_educations[educationIndex].exam_id"
+                                                        :reduce="(obj) => obj.id" :options="allExams" label="title"
+                                                        placeholder="--Select One--" :closeOnSelect="true" col="12" />
+                                                </td>
+
+                                                <td>
+                                                    <Input v-model="education.board"
+                                                        field="beneficiary_educations[educationIndex].board"
+                                                        placeholder="Board" col="12" />
+                                                    <small class="text-danger d-inline-block fw-medium mt-1"
+                                                        v-if="isFieldRequired(educationIndex) && !education.board">This
+                                                        field is required.</small>
+                                                </td>
+                                                <td>
+                                                    <Input v-model="education.institute"
+                                                        field="beneficiary_educations[educationIndex].institute"
+                                                        placeholder="Institute" col="12" />
+                                                    <!-- <small class="text-danger d-inline-block fw-medium mt-1">
+                                                    </small> -->
+                                                    <small class="text-danger d-inline-block fw-medium mt-1"
+                                                        v-if="isFieldRequired(educationIndex) && !education.institute">This
+                                                        field is required.</small>
+                                                </td>
+                                                <td>
+                                                    <Input v-model="education.result"
+                                                        field="beneficiary_educations[educationIndex].result"
+                                                        placeholder="Result" col="12" />
+                                                    <!-- <small class="text-danger d-inline-block fw-medium mt-1">
+                                                    </small> -->
+                                                    <small class="text-danger d-inline-block fw-medium mt-1"
+                                                        v-if="isFieldRequired(educationIndex) && !education.result">This
+                                                        field is required.</small>
+                                                </td>
+                                                <td>
+                                                    <div
+                                                        class="multiple_fields_actions_btn d-flex align-items-center gap-2">
+                                                        <button v-if="data.beneficiary_educations.length > 1"
+                                                            @click="deleteEducation(educationIndex)" type="button"
+                                                            class="btns delete_one" data-bs-toggle="tooltip"
+                                                            data-bs-placement="top" data-bs-title="Delete" v-x-tooltip>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="icon icon-tabler icons-tabler-outline icon-tabler-trash"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                data-bs-title="Delete" v-x-tooltip>
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M4 7l16 0" />
+                                                                <path d="M10 11l0 6" />
+                                                                <path d="M14 11l0 6" />
+                                                                <path
+                                                                    d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                                            </svg>
+                                                        </button>
+                                                        <button @click="addEducation" type="button"
+                                                            class="btns add_more" data-bs-toggle="tooltip"
+                                                            data-bs-placement="top" data-bs-title="Add" v-x-tooltip>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="icon icon-tabler icons-tabler-outline icon-tabler-plus">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M12 5l0 14" />
+                                                                <path d="M5 12l14 0" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <!-- <small class="opacity-0 text-danger d-inline-block fw-medium mt-1"></small> -->
+                                                </td>
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- End Education Section -->
+
+                    <!--Start Beneficiary Occupation Section -->
+                    <div class="tab-pane fade" id="pills-occupation" role="tabpanel"
+                        aria-labelledby="pills-occupation-tab" tabindex="0">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="multiple_options_create table-responsive">
+                                    <table class="table table-bordered mb-0 mt-0">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 40px">SL</th>
+                                                <th style="min-width: 250px">Occupation Title</th>
+                                                <th style="width: 150px">Working Hours</th>
+                                                <th>Occupation Risk</th>
+                                                <th>Work Location</th>
+                                                <th style="width: 150px">Monthly Income</th>
+                                                <th style="width: 150px">Year Income</th>
+                                                <th style="min-width: 120px">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody v-for="(ocupation, ocupationIndex) in data.beneficiary_occupations"
+                                            :key="`ocupation_${ocupationIndex}`">
+                                            <tr>
+                                                <td><span>{{ ocupationIndex + 1 }}</span></td>
+                                                <td>
+                                                    <Select field="beneficiary_occupations[ocupationIndex].occupation_id"
+                                                        :req="false" v-model="ocupation.occupation_id" label="title"
+                                                        :reduce="(obj) => obj.id" :options="allOccupations"
+                                                        placeholder="--Select One--" :closeOnSelect="true" col="12" />
+                                                </td>
+                                                <td>
+                                                    <Input v-model="ocupation.working_hour"
+                                                        field="beneficiary_occupations[ocupationIndex].working_hour"
+                                                        placeholder="working hours" col="12" :req="false" />
+                                                    <!-- <small class="text-danger d-inline-block fw-medium mt-1">
+                                                    </small> -->
+                                                    <small class="text-danger d-inline-block fw-medium mt-1"
+                                                        v-if="ocupationsFieldRequired(ocupationIndex) && !ocupation.working_hour">This
+                                                        field is required.</small>
+                                                </td>
+
+                                                <td>
+                                                    <Input v-model="ocupation.occupation_risk"
+                                                        field="beneficiary_occupations[ocupationIndex].occupation_risk"
+                                                        placeholder="occupation risk" col="12" />
+                                                    <small class="text-danger d-inline-block fw-medium mt-1">
+                                                    </small>
+                                                </td>
+                                                <td>
+                                                    <Input v-model="ocupation.work_location"
+                                                        field="beneficiary_occupations[ocupationIndex].work_location"
+                                                        placeholder="work location" col="12" />
+                                                    <small class="text-danger d-inline-block fw-medium mt-1"
+                                                        v-if="ocupationsFieldRequired(ocupationIndex) && !ocupation.work_location">This
+                                                        field is required.</small>
+                                                </td>
+                                                <td>
+                                                    <Input v-model="ocupation.monthly_income"
+                                                        @input="updatePastYearIncome(ocupationIndex)"
+                                                        field="beneficiary_occupations[ocupationIndex].monthly_income"
+                                                        placeholder="monthly income" col="12" />
+                                                    <small class="text-danger d-inline-block fw-medium mt-1"
+                                                        v-if="ocupationsFieldRequired(ocupationIndex) && !ocupation.monthly_income">This
+                                                        field is required.</small>
+                                                </td>
+                                                <td>
+                                                    <Input v-model="ocupation.past_year_income"
+                                                        field="beneficiary_occupations[ocupationIndex].past_year_income"
+                                                        placeholder="yearly income" col="12" />
+                                                    <small class="text-danger d-inline-block fw-medium mt-1">
+                                                    </small>
+                                                </td>
+                                                <td>
+                                                    <div
+                                                        class="multiple_fields_actions_btn d-flex align-items-center gap-2">
+                                                        <button v-if="data.beneficiary_occupations.length > 1"
+                                                            @click="deleteOcupations(ocupationIndex)" type="button"
+                                                            class="btns delete_one" data-bs-toggle="tooltip"
+                                                            data-bs-placement="top" data-bs-title="Delete" v-x-tooltip>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="icon icon-tabler icons-tabler-outline icon-tabler-trash"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                data-bs-title="Delete" v-x-tooltip>
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M4 7l16 0" />
+                                                                <path d="M10 11l0 6" />
+                                                                <path d="M14 11l0 6" />
+                                                                <path
+                                                                    d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                                            </svg>
+                                                        </button>
+                                                        <button @click="addOcupation" type="button"
+                                                            class="btns add_more" data-bs-toggle="tooltip"
+                                                            data-bs-placement="top" data-bs-title="Add" v-x-tooltip>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="icon icon-tabler icons-tabler-outline icon-tabler-plus">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M12 5l0 14" />
+                                                                <path d="M5 12l14 0" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Beneficiary Occupation Section -->
+
+                    <!--Start Beneficiary Family Section -->
+                    <div class="tab-pane fade" id="pills-family" role="tabpanel" aria-labelledby="pills-family-tab"
+                        tabindex="0">
+                        <div class="row g-3">
+                            <div v-for="(beneficiary_family_member, familyIndex) in data.beneficiary_family_members"
+                                :key="`beneficiary_family_member_${familyIndex}`" class="col-12">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <Fieldset>
+                                        <template v-slot:name>Beneficiary Family info</template>
+                                        <template v-slot:content>
+                                            <Select title="Relation"
+                                                field="beneficiary_family_members[familyIndex].relation_id" :req="true"
+                                                v-model="beneficiary_family_member.relation_id" label="title"
+                                                :reduce="(obj) => obj.id" :options="allRelations"
+                                                placeholder="--Select One--" :closeOnSelect="true" col="3" />
+                                               
+
+                                            <div class="col-lg-3">
+                                                <Input v-model="beneficiary_family_member.name"
+                                                    field="beneficiary_family_members[familyIndex].name" title="Name"
+                                                    :req="true" col="12 mb-0" />
+                                                <small class="text-danger d-inline-block fw-medium mt-1"
+                                                    v-if="familyFieldRequired(familyIndex) && !beneficiary_family_member.name">This
+                                                    field is required.</small>
+                                            </div>
+
+
+                                            <date-picker :id="`family_date_of_birth_${familyIndex}`"
+                                                field="beneficiary_family_members[familyIndex].family_date_of_birth"
+                                                v-model="beneficiary_family_member.family_date_of_birth"
+                                                title="Date of Birth" placeholder="dd/mm/yyyy" :req="false" col="3"
+                                                label="From Date"></date-picker>
+
+                                            <div class="col-lg-3">
+
+                                                <Radio v-model="beneficiary_family_member.gender"
+                                                    :field="`beneficiary_family_members[${familyIndex}]gender`"
+                                                    title="Gender" :list="[
+                                                        { value: 'male', title: 'Male' },
+                                                        { value: 'female', title: 'Female' },
+                                                        { value: 'others', title: 'Others' },
+                                                    ]" :req="true" col="12" />
+                                                <small class="text-danger d-inline-block fw-medium mt-1"
+                                                    v-if="familyFieldRequired(familyIndex) && !beneficiary_family_member.gender">This
+                                                    field is required.</small>
+                                            </div>
+
+                                            <Input v-model="beneficiary_family_member.family_nid"
+                                                field="beneficiary_family_members[familyIndex].family_nid" title="NID"
+                                                :req="false" col="3" />
+                                            <Select title="Occupation"
+                                                field="beneficiary_family_members[familyIndex].occupation_id"
+                                                :req="false" v-model="beneficiary_family_member.occupation_id"
+                                                label="title" :reduce="(obj) => obj.id" :options="allOccupations"
+                                                placeholder="--Select One--" :closeOnSelect="true" col="3" />
+
+                                            <Input v-model="beneficiary_family_member.earn"
+                                                field="beneficiary_family_members[familyIndex].earn" title="Earning"
+                                                :req="false" col="3" />
+                                            <Input v-model="beneficiary_family_member.yearly_income"
+                                                field="beneficiary_family_members[familyIndex].yearly_income"
+                                                title="Yearly Income" :req="false" col="3" />
+                                            <Select title="Going to School"
+                                                field="beneficiary_family_members[familyIndex].goes_to_school"
+                                                :req="false" v-model="beneficiary_family_member.goes_to_school"
+                                                :options="[
+                                                    { id: 0, name: 'Yes' },
+                                                    { id: 1, name: 'No' }
+                                                ]" label="name" :reduce="(obj) => obj.id" placeholder="--Select One--"
+                                                :closeOnSelect="true" col="3" />
+
+                                            <Input v-model="beneficiary_family_member.last_education_info"
+                                                field="beneficiary_family_members[familyIndex].last_education_info"
+                                                title="Last Education Info" :req="false" col="3" />
+
+                                            <!-- <Radio v-model="beneficiary_family_member.marital_status"
+                                                field="beneficiary_family_members[familyIndex].marital_status"
+                                                title="Marital Status" :list="[
+                                                    { value: 'married', title: 'Married' },
+                                                    { value: 'unmarried', title: 'Unmarried' },
+                                                    { value: 'divorced', title: 'Divorced' },
+                                                ]" :req="true" col="3" /> -->
+
+                                            <div class="col-3">
+                                                <Radio v-model="beneficiary_family_member.marital_status"
+                                                    :field="`beneficiary_family_members[${familyIndex}]marital_status`"
+                                                    title="Marital Status" :list="[
+                                                        { value: 'married', title: 'Married' },
+                                                        { value: 'unmarried', title: 'Unmarried' },
+                                                        { value: 'divorced', title: 'Divorced' },
+                                                    ]" :req="true" col="12" />
+                                                <small class="text-danger d-inline-block fw-medium mt-1"
+                                                    v-if="familyFieldRequired(familyIndex) && !beneficiary_family_member.marital_status">This
+                                                    field is required.</small>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <div class="input-group position-relative">
+                                                        <Textarea title="Remarks)"
+                                                            field="beneficiary_family_members[familyIndex].remarks"
+                                                            v-model="beneficiary_family_member.remarks" :req="false"
+                                                            col="12" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </template>
+                                    </Fieldset>
+
+                                    <div
+                                        class="multiple_fields_actions_btn d-flex flex-column justify-content-center align-items-center gap-2">
+                                        <button v-if="data.beneficiary_family_members.length > 1"
+                                            @click="deleteFamily(familyIndex)" type="button" class="btns delete_one"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Delete"
+                                            v-x-tooltip>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-trash"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Delete"
+                                                v-x-tooltip>
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M4 7l16 0" />
+                                                <path d="M10 11l0 6" />
+                                                <path d="M14 11l0 6" />
+                                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                            </svg>
+                                        </button>
+                                        <button @click="addFamily" type="button" class="btns add_more"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add"
+                                            v-x-tooltip>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-plus">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M12 5l0 14" />
+                                                <path d="M5 12l14 0" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--End Beneficiary Family Section -->
+
+                    <!--End Beneficiary Health Section -->
+                    <div class="tab-pane fade" id="pills-health" role="tabpanel" aria-labelledby="pills-health-tab"
+                        tabindex="0">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <Fieldset>
+                                    <template v-slot:name>Health Info</template>
+                                    <template v-slot:content>
+                                        <Input title="Height" v-model="data.height" field="data.height" :req="false"
+                                            col="3 col-lg-3" />
+                                        <Input title="Weight" v-model="data.weight" field="data.weight" :req="false"
+                                            col="3 col-lg-3" />
+
+                                        <Select title="Physical Condition" field="data.physical_condition" :req="false"
+                                            v-model="data.physical_condition" label="name" :reduce="(obj) => obj.value"
+                                            :options="healths" placeholder="--Select One--" :closeOnSelect="true"
+                                            col="3 col-lg-3" />
+
+                                        <div class="multiple_options_create table-responsive">
+                                            <table class="table table-bordered mb-0 mt-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width: 40px">SL</th>
+                                                        <th style="min-width: 300px">Disease Name</th>
+                                                        <th>Effected Date</th>
+                                                        <th>Recovery Date</th>
+                                                        <th style="width: 100px">Continuing</th>
+                                                        <th style="width: 170px">Infectious Diseases</th>
+                                                        <th style="min-width: 120px">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody
+                                                    v-for="(beneficiary_disease, diseaseIndex) in data.beneficiary_diseases"
+                                                    :key="`beneficiary_disease_${diseaseIndex}`">
+                                                    <tr>
+                                                        <td><span>{{ diseaseIndex + 1 }}</span></td>
+                                                        <td>
+                                                            <Select v-model="beneficiary_disease.disease_id"
+                                                                field="beneficiary_diseases[diseaseIndex].disease_id"
+                                                                :reduce="(obj) => obj.id" :options="allDisease"
+                                                                label="title" placeholder="--Select One--"
+                                                                :closeOnSelect="true" col="12" />
+                                                        </td>
+                                                        <td>
+                                                            <date-picker :id="`affected_date_${diseaseIndex}`"
+                                                                v-model="beneficiary_disease.affected_date"
+                                                                field="beneficiary_diseases[diseaseIndex].affected_date"
+                                                                placeholder="dd/mm/yyyy" :req="false" col="12"
+                                                                label="From Date"></date-picker>
+                                                            <small class="text-danger d-inline-block fw-medium mt-1"
+                                                                v-if="diseaseFieldRequired(diseaseIndex) && !beneficiary_disease.affected_date">This
+                                                                field is required.</small>
+                                                        </td>
+                                                        <td>
+                                                            <date-picker :id="`recovery_date_${diseaseIndex}`"
+                                                                v-model="beneficiary_disease.recovery_date"
+                                                                field="beneficiary_diseases[diseaseIndex].recovery_date"
+                                                                placeholder="dd/mm/yyyy" :req="false" col="12"
+                                                                label="From Date"></date-picker>
+                                                        </td>
+                                                        <td class="text-center align-middle">
+                                                            <input class="opacity-1" type="checkbox"
+                                                                v-model="beneficiary_disease.is_continue"
+                                                                field="beneficiary_diseases[diseaseIndex].is_continue"
+                                                                col="12" />
+                                                            <small class="text-danger d-inline-block fw-medium mt-1">
+                                                            </small>
+                                                        </td>
+                                                        <td class="text-center align-middle">
+                                                            <input class="opacity-1" type="checkbox"
+                                                                v-model="beneficiary_disease.is_infectious"
+                                                                field="beneficiary_diseases[diseaseIndex].is_infectious"
+                                                                col="12" />
+                                                            <small class="text-danger d-inline-block fw-medium mt-1">
+                                                            </small>
+                                                        </td>
+                                                        <td>
+                                                            <div
+                                                                class="multiple_fields_actions_btn d-flex align-items-center gap-2">
+                                                                <button v-if="data.beneficiary_diseases.length > 1"
+                                                                    @click="deleteDisease(diseaseIndex)" type="button"
+                                                                    class="btns delete_one" data-bs-toggle="tooltip"
+                                                                    data-bs-placement="top" data-bs-title="Delete"
+                                                                    v-x-tooltip>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="icon icon-tabler icons-tabler-outline icon-tabler-trash"
+                                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                        data-bs-title="Delete" v-x-tooltip>
+                                                                        <path stroke="none" d="M0 0h24v24H0z"
+                                                                            fill="none" />
+                                                                        <path d="M4 7l16 0" />
+                                                                        <path d="M10 11l0 6" />
+                                                                        <path d="M14 11l0 6" />
+                                                                        <path
+                                                                            d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                                                        <path
+                                                                            d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                                                    </svg>
+                                                                </button>
+                                                                <button @click="addDisease" type="button"
+                                                                    class="btns add_more" data-bs-toggle="tooltip"
+                                                                    data-bs-placement="top" data-bs-title="Add"
+                                                                    v-x-tooltip>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="icon icon-tabler icons-tabler-outline icon-tabler-plus">
+                                                                        <path stroke="none" d="M0 0h24v24H0z"
+                                                                            fill="none" />
+                                                                        <path d="M12 5l0 14" />
+                                                                        <path d="M5 12l14 0" />
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <!-- <small class="opacity-0 text-danger d-inline-block fw-medium mt-1"></small> -->
+                                                        </td>
+                                                    </tr>
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </template>
+                                </Fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-wealth" role="tabpanel" aria-labelledby="pills-wealth-tab"
+                        tabindex="0">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="multiple_options_create table-responsive">
+                                    <table class="table table-bordered mb-0 mt-0">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 40px">SL</th>
+                                                <th style="width: 250px">Wealth</th>
+                                                <th>Source of ownership</th>
+                                                <th style="width: 130px">Quantity</th>
+                                                <th>Description</th>
+                                                <th style="width: 150px">Ownership Year</th>
+                                                <th style="width: 150px">Present value</th>
+                                                <th style="min-width: 120px">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody v-for="(beneficiary_wealth, wealthIndex) in data.beneficiary_wealths"
+                                            :key="`beneficiary_wealth_${wealthIndex}`">
+                                            <tr>
+                                                <td><span>{{ wealthIndex + 1 }}</span></td>
+                                                <td>
+                                                    <Select field="beneficiary_wealths[wealthIndex].wealth_id"
+                                                        :req="false" v-model="beneficiary_wealth.wealth_id"
+                                                        label="title" :reduce="(obj) => obj.id" :options="allWealths"
+                                                        placeholder="--Select One--" :closeOnSelect="true" col="12" />
+                                                </td>
+                                                <td>
+                                                    <Select field="beneficiary_wealths[wealthIndex].sourch_of_ownership"
+                                                        :req="false" v-model="beneficiary_wealth.sourch_of_ownership"
+                                                        label="name" :reduce="(obj) => obj.value" :options="ownerships"
+                                                        placeholder="--Select One--" :closeOnSelect="true" col="12" />
+                                                    <small class="text-danger d-inline-block fw-medium mt-1"
+                                                        v-if="wealthFieldRequired(wealthIndex) && !beneficiary_wealth.sourch_of_ownership">This
+                                                        field is required.</small>
+                                                </td>
+                                                <td>
+                                                    <Input v-model="beneficiary_wealth.qty"
+                                                        field="beneficiary_wealths[wealthIndex].qty"
+                                                        placeholder="quantity" col="12" />
+                                                    <!-- <small class="text-danger d-inline-block fw-medium mt-1">
+                                                    </small> -->
+                                                    <small class="text-danger d-inline-block fw-medium mt-1"
+                                                        v-if="wealthFieldRequired(wealthIndex) && !beneficiary_wealth.qty">This
+                                                        field is required.</small>
+                                                </td>
+                                                <td>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <div class="input-group position-relative">
+                                                                <Textarea
+                                                                    field="beneficiary_wealths[wealthIndex].description"
+                                                                    v-model="beneficiary_wealth.description"
+                                                                    :req="false" col="12" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <Select field="beneficiary_wealths[wealthIndex].ownership_year"
+                                                        :req="false" v-model="beneficiary_wealth.ownership_year"
+                                                        label="name" :reduce="(obj) => obj.id" :options="yearsOptions"
+                                                        placeholder="--Select One--" :closeOnSelect="true" col="12" />
+                                                </td>
+                                                <td>
+                                                    <Input v-model="beneficiary_wealth.present_value"
+                                                        field="beneficiary_wealths[wealthIndex].present_value"
+                                                        name="present_value" placeholder="present value" col="12" />
+                                                    <small class="text-danger d-inline-block fw-medium mt-1">
+                                                    </small>
+                                                </td>
+                                                <td>
+                                                    <div
+                                                        class="multiple_fields_actions_btn d-flex align-items-center gap-2">
+                                                        <button v-if="data.beneficiary_wealths.length > 1"
+                                                            @click="deleteWealth(wealthIndex)" type="button"
+                                                            class="btns delete_one" data-bs-toggle="tooltip"
+                                                            data-bs-placement="top" data-bs-title="Delete" v-x-tooltip>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="icon icon-tabler icons-tabler-outline icon-tabler-trash"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                data-bs-title="Delete" v-x-tooltip>
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M4 7l16 0" />
+                                                                <path d="M10 11l0 6" />
+                                                                <path d="M14 11l0 6" />
+                                                                <path
+                                                                    d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                                            </svg>
+                                                        </button>
+                                                        <button @click="addWealth" type="button" class="btns add_more"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            data-bs-title="Add" v-x-tooltip>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="icon icon-tabler icons-tabler-outline icon-tabler-plus">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M12 5l0 14" />
+                                                                <path d="M5 12l14 0" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-asset" role="tabpanel" aria-labelledby="pills-asset-tab"
+                        tabindex="0">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="multiple_options_create table-responsive">
+                                    <table class="table table-bordered mb-0 mt-0">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 40px">SL</th>
+                                                <th style="width: 250px">Asset</th>
+                                                <th style="width:150px">Source of ownership</th>
+                                                <th style="width: 130px">Quantity</th>
+                                                <th>Description</th>
+                                                <th style="width: 200px">Ownership Year</th>
+                                                <th style="width: 150px">Present value</th>
+                                                <th style="min-width: 120px">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody v-for="(benificiary_asset, assetIndex) in data.benificiary_assets"
+                                            :key="`benificiary_asset_${assetIndex}`">
+                                            <tr>
+                                                <td><span>{{ assetIndex + 1 }}</span></td>
+
+                                                <td>
+                                                    <Select field="benificiary_assets[assetIndex].asset_id" :req="false"
+                                                        v-model="benificiary_asset.asset_id" label="title"
+                                                        :reduce="(obj) => obj.id" :options="allAssets"
+                                                        placeholder="--Select One--" :closeOnSelect="true" col="12" />
+                                                </td>
+
+                                                <td>
+                                                    <Select field="benificiary_assets[assetIndex].sourch_of_ownership"
+                                                        :req="false" v-model="benificiary_asset.sourch_of_ownership"
+                                                        label="name" :reduce="(obj) => obj.value" :options="ownerships"
+                                                        placeholder="--Select One--" :closeOnSelect="true" col="12" />
+                                                    <small class="text-danger d-inline-block fw-medium mt-1"
+                                                        v-if="assetFieldRequired(assetIndex) && !benificiary_asset.sourch_of_ownership">This
+                                                        field is required.</small>
+                                                </td>
+
+                                                <td>
+                                                    <Input v-model="benificiary_asset.qty"
+                                                        field="benificiary_assets[assetIndex].qty"
+                                                        placeholder="quantity" col="12" />
+                                                    <!-- <small class="text-danger d-inline-block fw-medium mt-1">
+                                                    </small> -->
+                                                    <small class="text-danger d-inline-block fw-medium mt-1"
+                                                        v-if="assetFieldRequired(assetIndex) && !benificiary_asset.qty">This
+                                                        field is required.</small>
+                                                </td>
+                                                <td>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <div class="input-group position-relative">
+                                                                <Textarea
+                                                                    field="benificiary_assets[assetIndex].description"
+                                                                    v-model="benificiary_asset.description" :req="false"
+                                                                    col="12" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <Select field="benificiary_assets[assetIndex].ownership_year"
+                                                        :req="false" v-model="benificiary_asset.ownership_year"
+                                                        label="name" :reduce="(obj) => obj.id" :options="yearsOptions"
+                                                        placeholder="--Select One--" :closeOnSelect="true" col="12" />
+                                                </td>
+                                                <td>
+                                                    <Input v-model="benificiary_asset.present_value"
+                                                        field="benificiary_assets[assetIndex].present_value"
+                                                        placeholder="present value" col="12" />
+                                                    <small class="text-danger d-inline-block fw-medium mt-1">
+                                                    </small>
+                                                </td>
+                                                <td>
+                                                    <div
+                                                        class="multiple_fields_actions_btn d-flex align-items-center gap-2">
+                                                        <button v-if="data.benificiary_assets.length > 1"
+                                                            @click="deleteAssets(assetIndex)" type="button" class="btns delete_one"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            data-bs-title="Delete" v-x-tooltip>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="icon icon-tabler icons-tabler-outline icon-tabler-trash"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                data-bs-title="Delete" v-x-tooltip>
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M4 7l16 0" />
+                                                                <path d="M10 11l0 6" />
+                                                                <path d="M14 11l0 6" />
+                                                                <path
+                                                                    d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                                            </svg>
+                                                        </button>
+                                                        <button @click="addAsset" type="button" class="btns add_more"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            data-bs-title="Add" v-x-tooltip>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="icon icon-tabler icons-tabler-outline icon-tabler-plus">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M12 5l0 14" />
+                                                                <path d="M5 12l14 0" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-liabilities" role="tabpanel"
+                        aria-labelledby="pills-liabilities-tab" tabindex="0">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="multiple_options_create table-responsive">
+                                    <table class="table table-bordered mb-0 mt-0">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 40px">SL</th>
+                                                <th style="min-width: 250px">Liability Type</th>
+                                                <th>Loan from</th>
+                                                <th>Amount</th>
+                                                <th>Mortgage Asset</th>
+                                                <th>Start date</th>
+                                                <th>Finish Date</th>
+                                                <th style="min-width: 120px">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody
+                                            v-for="(beneficiary_liabilite, liabilityIndex) in data.beneficiary_liabilites"
+                                            :key="`beneficiary_liabilite_${liabilityIndex}`">
+                                            <tr>
+                                                <td><span>{{ liabilityIndex + 1 }}</span></td>
+
+                                                <td>
+                                                    <Select field="beneficiary_liabilites[liabilityIndex].liability_id"
+                                                        :req="false" v-model="beneficiary_liabilite.liability_id"
+                                                        label="title" :reduce="(obj) => obj.id"
+                                                        :options="allLiabilities" placeholder="--Select One--"
+                                                        :closeOnSelect="true" col="12" />
+                                                </td>
+                                                <td>
+                                                    <Input v-model="beneficiary_liabilite.loan_from"
+                                                        field="beneficiary_liabilites[liabilityIndex].loan_from"
+                                                        placeholder="loan from" col="12" />
+                                                    <!-- <small class="text-danger d-inline-block fw-medium mt-1">
+                                                    </small> -->
+                                                    <small class="text-danger d-inline-block fw-medium mt-1"
+                                                        v-if="liabilitesFieldRequired(liabilityIndex) && !beneficiary_liabilite.loan_from">This
+                                                        field is required.</small>
+                                                </td>
+                                                <td>
+                                                    <Input v-model="beneficiary_liabilite.amount"
+                                                        field="beneficiary_liabilites[liabilityIndex].amount"
+                                                        placeholder="amount" col="12" />
+                                                    <!-- <small class="text-danger d-inline-block fw-medium mt-1">
+                                                    </small> -->
+                                                    <small class="text-danger d-inline-block fw-medium mt-1"
+                                                        v-if="liabilitesFieldRequired(liabilityIndex) && !beneficiary_liabilite.amount">This
+                                                        field is required.</small>
+                                                </td>
+                                                <td>
+                                                    <Input v-model="beneficiary_liabilite.mortgage_asset"
+                                                        field="beneficiary_liabilites[liabilityIndex].mortgage_asset"
+                                                        placeholder="Mortgage Asset" col="12" />
+                                                    <small class="text-danger d-inline-block fw-medium mt-1">
+                                                    </small>
+
+                                                </td>
+                                                <td>
+                                                    <date-picker :id="`start_date_${liabilityIndex}`"
+                                                        field="beneficiary_liabilites[liabilityIndex].start_date"
+                                                        v-model="beneficiary_liabilite.start_date"
+                                                        placeholder="dd/mm/yyyy" :req="false" col="12"
+                                                        label="From Date"></date-picker>
+                                                    <small class="text-danger d-inline-block fw-medium mt-1"
+                                                        v-if="liabilitesFieldRequired(liabilityIndex) && !beneficiary_liabilite.start_date">This
+                                                        field is required.</small>
+                                                </td>
+                                                <td>
+                                                    <date-picker :id="`end_date_${liabilityIndex}`"
+                                                        field="beneficiary_liabilites[liabilityIndex].end_date"
+                                                        name="end_date" v-model="beneficiary_liabilite.end_date"
+                                                        placeholder="dd/mm/yyyy" :req="false" col="12"
+                                                        label="From Date"></date-picker>
+                                                    <small class="text-danger d-inline-block fw-medium mt-1"
+                                                        v-if="liabilitesFieldRequired(liabilityIndex) && !beneficiary_liabilite.end_date">This
+                                                        field is required.</small>
+                                                </td>
+                                                <td>
+                                                    <div
+                                                        class="multiple_fields_actions_btn d-flex align-items-center gap-2">
+                                                        <button v-if="data.beneficiary_liabilites.length > 1"
+                                                            @click="deleteLiabilites(liabilityIndex)" type="button"
+                                                            class="btns delete_one" data-bs-toggle="tooltip"
+                                                            data-bs-placement="top" data-bs-title="Delete" v-x-tooltip>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="icon icon-tabler icons-tabler-outline icon-tabler-trash"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                data-bs-title="Delete" v-x-tooltip>
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M4 7l16 0" />
+                                                                <path d="M10 11l0 6" />
+                                                                <path d="M14 11l0 6" />
+                                                                <path
+                                                                    d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                                            </svg>
+                                                        </button>
+                                                        <button @click="addLiabilities" type="button"
+                                                            class="btns add_more" data-bs-toggle="tooltip"
+                                                            data-bs-placement="top" data-bs-title="Add" v-x-tooltip>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="icon icon-tabler icons-tabler-outline icon-tabler-plus">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path d="M12 5l0 14" />
+                                                                <path d="M5 12l14 0" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </create-form>
+</template>
+
+<script>
+const model = "beneficiary";
+
+export default {
+    computed: {
+        healths() {
+            const healths = [];
+            if (Object.keys(this.physicalCondition).length > 0) {
+                this.physicalCondition.forEach(function (type) {
+                    healths.push({
+                        name: type.name,
+                        value: type.value,
+                    });
+                });
+            }
+            return healths;
+        },
+        ownerships() {
+            const ownerships = [];
+            if (Object.keys(this.sourceofOwnership).length > 0) {
+                this.sourceofOwnership.forEach(function (type) {
+                    ownerships.push({
+                        name: type.name,
+                        value: type.value,
+                    });
+                });
+            }
+            return ownerships;
+        },
+        yearsOptions() {
+            const currentYear = new Date().getFullYear();
+            let years = [];
+            for (let i = 0; i < 20; i++) {
+                let year = currentYear - i;
+                years.push({ id: year, name: year.toString() });
+            }
+            return years;
+        },
+
+
+    },
+    data() {
+        return {
+            model: model,
+            page_title: "",
+            data: {
+                ocupations: [
+                    // Example of how your data might be structured
+                    { monthly_income: 0, past_year_income: 0 },
+                ],
+                block: false,
+                image: "",
+                date_of_birth: "",
+                birth_certificate: "",
+                physical_condition: "",
+                sourch_of_ownership: "",
+                mobile_no: '',
+                marital_status: "",
+                gender: "",
+                beneficiary_educations: [
+                    {
+                        exam_id: "",
+                        board: "",
+                        institute: "",
+                        result: "",
+                    },
+                ],
+                beneficiary_occupations: [
+                    {
+                        occupation_id: "",
+                        working_hour: "",
+                        occupation_risk: "",
+                        work_location: "",
+                        monthly_income: "",
+                        past_year_income: ""
+
+                    },
+                ],
+                beneficiary_family_members: [
+                    {
+                        relation_id: "",
+                        name: "",
+                        family_date_of_birth: "",
+                        gender: "",
+                        family_nid: "",
+                        occupation_id: "",
+                        earn: "",
+                        yearly_income: "",
+                        goes_to_school: "",
+                        last_education_info: "",
+                        marital_status: "",
+                        remarks: "",
+                    },
+                ],
+
+                beneficiary_diseases: [
+                    {
+                        disease_id: "",
+                        affected_date: "",
+                        recovery_date: "",
+                        is_continue: "",
+                        is_infectious: "",
+                    },
+                ],
+                beneficiary_wealths: [
+                    {
+                        wealth_id: "",
+                        qty: "",
+                        description: "",
+                        ownership_year: null, // initial value
+                        present_value: "",
+                    },
+                ],
+                benificiary_assets: [
+                    {
+                        asset_id: "",
+                        qty: "",
+                        description: "",
+                        ownership_year: null,
+                        present_value: "",
+                    },
+                ],
+                beneficiary_liabilites: [
+                    {
+                        liability_id: "",
+                        loan_from: "",
+                        amount: "",
+                        mortgage_asset: "",
+                        start_date: "",
+                        end_date: "",
+                    },
+                ],
+            },
+            image: { original_image: "" },
+            preStates: [],
+            perStates: [],
+            preDistricts: [],
+            perDistricts: [],
+            preUpazillas: [],
+            perUpazillas: [],
+            filteredDistricts: [],
+            allExams: [],
+            allRelations: [],
+            allOccupations: [],
+            allDisease: [],
+            allWealths: [],
+            allAssets: [],
+            allLiabilities: [],
+        };
+    },
+    provide() {
+        return {
+            validate: this.validation,
+            data: () => this.data,
+            image: this.image,
+        };
+    },
+
+
+    methods: {
+        submit: function (e) {
+            this.$validate().then((res) => {
+                let errorCount = this.validation.countErrors();
+
+                for (let index = 0; index < this.data.beneficiary_educations.length; index++) {
+                    // If the field is required and the value is empty, increment the error count
+                    if (this.isFieldRequired(index)) {
+                        if (!this.data.beneficiary_educations[index].board) {
+                            errorCount++;
+                        }
+                        if (!this.data.beneficiary_educations[index].institute) {
+                            errorCount++;
+                        }
+                        if (!this.data.beneficiary_educations[index].result) {
+                            errorCount++;
+                        }
+                    }
+                }
+
+                // Check errors in beneficiary_occupations
+                for (let index = 0; index < this.data.beneficiary_occupations.length; index++) {
+                    if (this.ocupationsFieldRequired(index)) {
+                        if (!this.data.beneficiary_occupations[index].working_hour) {
+                            errorCount++;
+                        }
+                        if (!this.data.beneficiary_occupations[index].monthly_income) {
+                            errorCount++;
+                        }
+                        if (!this.data.beneficiary_occupations[index].work_location) {
+                            errorCount++;
+                        }
+                    }
+                }
+                // Check errors in Beneficiary Family members
+                for (let index = 0; index < this.data.beneficiary_family_members.length; index++) {
+                    if (this.familyFieldRequired(index)) {
+                        if (!this.data.beneficiary_family_members[index].name) {
+                            errorCount++;
+                        }
+                        if (!this.data.beneficiary_family_members[index].gender) {
+                            errorCount++;
+                        }
+                        if (!this.data.beneficiary_family_members[index].marital_status) {
+                            errorCount++;
+                        }
+                    }
+                }
+                // Check errors in Beneficiary Disease
+                for (let index = 0; index < this.data.beneficiary_diseases.length; index++) {
+                    if (this.diseaseFieldRequired(index)) {
+                        if (!this.data.beneficiary_diseases[index].affected_date) {
+                            errorCount++;
+                        }
+                    }
+                }
+                // Check errors in Beneficiary Wealths
+                for (let index = 0; index < this.data.beneficiary_wealths.length; index++) {
+                    if (this.wealthFieldRequired(index)) {
+                        if (!this.data.beneficiary_wealths[index].sourch_of_ownership) {
+                            errorCount++;
+                        }
+                        if (!this.data.beneficiary_wealths[index].qty) {
+                            errorCount++;
+                        }
+                    }
+                }
+                // Check errors in Beneficiary Assets
+                for (let index = 0; index < this.data.benificiary_assets.length; index++) {
+                    if (this.assetFieldRequired(index)) {
+                        if (!this.data.benificiary_assets[index].sourch_of_ownership) {
+                            errorCount++;
+                        }
+                        if (!this.data.benificiary_assets[index].qty) {
+                            errorCount++;
+                        }
+                    }
+                }
+                // Check errors in Beneficiary Liabilities
+                for (let index = 0; index < this.data.beneficiary_liabilites.length; index++) {
+                    if (this.liabilitesFieldRequired(index)) {
+                        if (!this.data.beneficiary_liabilites[index].loan_from) {
+                            errorCount++;
+                        }
+                        if (!this.data.beneficiary_liabilites[index].amount) {
+                            errorCount++;
+                        }
+                        if (!this.data.beneficiary_liabilites[index].start_date) {
+                            errorCount++;
+                        }
+                        if (!this.data.beneficiary_liabilites[index].end_date) {
+                            errorCount++;
+                        }
+                    }
+                }
+
+                if (errorCount > 0) {
+                    console.log(this.validation.allErrors());
+                    this.$toast(
+                        "You need to fill " +
+                        errorCount +
+                        " more empty mandatory fields",
+                        "warning"
+                    );
+                    return false;
+                }
+
+                if (res) {
+
+                    var form = document.getElementById("form");
+                    var formData = new FormData(form);
+                    formData.append("image_base64", this.data.original_image);
+                    formData.append("birth_certificate", this.data.birth_certificate);
+                    formData.append("pre_district_id", this.data.pre_district_id);
+                    formData.append("pre_state_id", this.data.pre_state_id);
+                    formData.append("pre_upazilla_id", this.data.pre_upazilla_id);
+                    formData.append("per_district_id", this.data.per_district_id);
+                    formData.append("per_state_id", this.data.per_state_id);
+                    formData.append("per_upazilla_id", this.data.per_upazilla_id);
+                    formData.append("physical_condition", this.data.physical_condition);
+
+                    // Loop through beneficiary_educations array and append each field
+                    this.data.beneficiary_educations.forEach((education, index) => {
+                        if (education.exam_id && education.board && education.institute && education.result) {
+                            if (education.id) {
+                                formData.append(`beneficiary_educations[${index}][id]`, education.id);
+                            }
+                            formData.append(`beneficiary_educations[${index}][exam_id]`, education.exam_id);
+                            formData.append(`beneficiary_educations[${index}][board]`, education.board);
+                            formData.append(`beneficiary_educations[${index}][institute]`, education.institute);
+                            formData.append(`beneficiary_educations[${index}][result]`, education.result);
+                        }
+                    });
+
+                    this.data.beneficiary_occupations.forEach((ocupation, index) => {
+                        if (ocupation.occupation_id) {
+                            if (ocupation.id) {
+                                formData.append(`beneficiary_occupations[${index}][id]`, ocupation.id);
+                            }
+                            formData.append(`beneficiary_occupations[${index}][occupation_id]`, ocupation.occupation_id);
+                            formData.append(`beneficiary_occupations[${index}][working_hour]`, ocupation.working_hour);
+                            formData.append(`beneficiary_occupations[${index}][occupation_risk]`, ocupation.occupation_risk);
+                            formData.append(`beneficiary_occupations[${index}][work_location]`, ocupation.work_location);
+                            formData.append(`beneficiary_occupations[${index}][monthly_income]`, ocupation.monthly_income);
+                            formData.append(`beneficiary_occupations[${index}][past_year_income]`, ocupation.past_year_income);
+                        }
+                    });
+
+                    this.data.beneficiary_diseases.forEach((diseases, index) => {
+                        if (diseases.disease_id && diseases.affected_date) {
+                            if (diseases.id) {
+                                formData.append(`beneficiary_diseases[${index}][id]`, diseases.id);
+                            }
+                            formData.append(`beneficiary_diseases[${index}][disease_id]`, diseases.disease_id);
+                            formData.append(`beneficiary_diseases[${index}][affected_date]`, diseases.affected_date);
+                            formData.append(`beneficiary_diseases[${index}][recovery_date]`, diseases.recovery_date);
+                            formData.append(`beneficiary_diseases[${index}][is_continue]`, diseases.is_continue);
+                            formData.append(`beneficiary_diseases[${index}][is_infectious]`, diseases.is_infectious);
+                        }
+                    });
+
+                    this.data.beneficiary_wealths.forEach((wealths, index) => {
+                        if (wealths.wealth_id && wealths.sourch_of_ownership && wealths.qty) {
+                            if (wealths.id) {
+                                formData.append(`beneficiary_wealths[${index}][id]`, wealths.id);
+                            }
+                            formData.append(`beneficiary_wealths[${index}][wealth_id]`, wealths.wealth_id);
+                            formData.append(`beneficiary_wealths[${index}][sourch_of_ownership]`, wealths.sourch_of_ownership);
+                            formData.append(`beneficiary_wealths[${index}][qty]`, wealths.qty);
+                            formData.append(`beneficiary_wealths[${index}][description]`, wealths.description);
+                            formData.append(`beneficiary_wealths[${index}][ownership_year]`, wealths.ownership_year);
+                            formData.append(`beneficiary_wealths[${index}][present_value]`, wealths.present_value);
+                        }
+
+                    });
+
+                    this.data.benificiary_assets.forEach((assets, index) => {
+                        if (assets.asset_id && assets.sourch_of_ownership && assets.qty) {
+                            if (assets.id) {
+                                formData.append(`benificiary_assets[${index}][id]`, assets.id);
+                            }
+                            formData.append(`benificiary_assets[${index}][asset_id]`, assets.asset_id);
+                            formData.append(`benificiary_assets[${index}][sourch_of_ownership]`, assets.sourch_of_ownership);
+                            formData.append(`benificiary_assets[${index}][qty]`, assets.qty);
+                            formData.append(`benificiary_assets[${index}][description]`, assets.description);
+                            formData.append(`benificiary_assets[${index}][ownership_year]`, assets.ownership_year);
+                            formData.append(`benificiary_assets[${index}][present_value]`, assets.present_value);
+                        }
+                    });
+
+                    this.data.beneficiary_liabilites.forEach((liabilites, index) => {
+                        if (liabilites.liability_id) {
+                            if (liabilites.id) {
+                                formData.append(`beneficiary_liabilites[${index}][id]`, liabilites.id);
+                            }
+                            formData.append(`beneficiary_liabilites[${index}][liability_id]`, liabilites.liability_id);
+                            formData.append(`beneficiary_liabilites[${index}][loan_from]`, liabilites.loan_from);
+                            formData.append(`beneficiary_liabilites[${index}][amount]`, liabilites.amount);
+                            formData.append(`beneficiary_liabilites[${index}][mortgage_asset]`, liabilites.mortgage_asset);
+                            formData.append(`beneficiary_liabilites[${index}][start_date]`, liabilites.start_date);
+                            formData.append(`beneficiary_liabilites[${index}][end_date]`, liabilites.end_date);
+                        }
+                    });
+
+                    this.data.beneficiary_family_members.forEach((members, index) => {
+                        if (members.relation_id) {
+                            if (members.id) {
+                                formData.append(`beneficiary_family_members[${index}][id]`, members.id);
+                            }
+                            formData.append(`beneficiary_family_members[${index}][relation_id]`, members.relation_id);
+                            formData.append(`beneficiary_family_members[${index}][occupation_id]`, members.occupation_id);
+                            formData.append(`beneficiary_family_members[${index}][goes_to_school]`, members.goes_to_school);
+                            formData.append(`beneficiary_family_members[${index}][name]`, members.name);
+                            formData.append(`beneficiary_family_members[${index}][family_date_of_birth]`, members.family_date_of_birth);
+                            formData.append(`beneficiary_family_members[${index}][gender]`, members.gender);
+                            formData.append(`beneficiary_family_members[${index}][family_nid]`, members.family_nid);
+                            formData.append(`beneficiary_family_members[${index}][earn]`, members.earn);
+                            formData.append(`beneficiary_family_members[${index}][yearly_income]`, members.yearly_income);
+                            formData.append(`beneficiary_family_members[${index}][last_education_info]`, members.last_education_info);
+                            formData.append(`beneficiary_family_members[${index}][marital_status]`, members.marital_status);
+                            formData.append(`beneficiary_family_members[${index}][remarks]`, members.remarks);
+                        }
+                    });
+
+                    if (this.data.id) {
+                        this.update(this.model, formData, this.data.id, true);
+                    } else {
+                        this.store(this.model, formData);
+                    }
+                }
+            });
+        },
+
+        updatePermanentAddress() {
+            if (this.data.block) {
+                // Copy present address to permanent address
+                this.data.permanent_address = this.data.present_address;
+                this.data.per_state_id = this.data.pre_state_id;
+                this.data.per_district_id = this.data.pre_district_id;
+                this.data.per_upazilla_id = this.data.pre_upazilla_id;
+            } else {
+                // Optionally, clear the permanent address when unchecked
+                this.data.permanent_address = '';
+                this.data.per_state_id = null;
+                this.data.per_district_id = null;
+                this.data.per_upazilla_id = null;
+            }
+        },
+        updatePastYearIncome(index) {
+            const monthlyIncome = this.data.beneficiary_occupations[index].monthly_income;
+            this.data.beneficiary_occupations[index].past_year_income = this.safeNumber(monthlyIncome) * 12; // Multiply by 12 for yearly income
+        },
+
+
+        isFieldRequired(index) {
+            return !!this.data.beneficiary_educations[index].exam_id;
+
+        },
+        ocupationsFieldRequired(index) {
+            return !!this.data.beneficiary_occupations[index].occupation_id;
+        },
+        familyFieldRequired(index) {
+            return !!this.data.beneficiary_family_members[index].relation_id;
+        },
+        diseaseFieldRequired(index) {
+            return !!this.data.beneficiary_diseases[index].disease_id;
+        },
+        wealthFieldRequired(index) {
+            return !!this.data.beneficiary_wealths[index].wealth_id;
+        },
+        assetFieldRequired(index) {
+            return !!this.data.benificiary_assets[index].asset_id;
+        },
+        liabilitesFieldRequired(index) {
+            return !!this.data.beneficiary_liabilites[index].liability_id;
+        },
+        //Multiple Education
+        addEducation() {
+            this.data.beneficiary_educations.push({
+                exam_id: "",
+                board: "",
+                institute: "",
+                result: "",
+            });
+        },
+        deleteEducation(index) {
+            this.data.beneficiary_educations.splice(index, 1);
+        },
+        // End Multiple Education
+
+        // Start Multiple Occupation
+        addOcupation() {
+            this.data.beneficiary_occupations.push({
+                title: "",
+                working_hour: "",
+                occupation_risk: "",
+                work_location: "",
+                monthly_income: "",
+                past_year_income: ""
+            });
+        },
+
+        deleteOcupations(index) {
+            this.data.beneficiary_occupations.splice(index, 1);
+
+        },
+        // End Multiple Occupation
+
+        // Add Multiple Family
+        addFamily() {
+            this.data.beneficiary_family_members.push({
+                name: "",
+                family_date_of_birth: "",
+                gender: "",
+                family_nid: "",
+                occupation_id: "",
+                earn: "",
+                yearly_income: "",
+                last_education_info: "",
+                marital_status: "",
+                remarks: "",
+            });
+        },
+
+        deleteFamily(index) {
+            this.data.beneficiary_family_members.splice(index, 1);
+        },
+        // End Multiple Family
+
+        // Start Multiple Health
+        addDisease() {
+            this.data.beneficiary_diseases.push({
+                disease_id: "",
+                affected_date: "",
+                recovery_date: "",
+                is_continue: "",
+                is_infectious: "",
+            });
+        },
+        deleteDisease(index) {
+            this.data.beneficiary_diseases.splice(index, 1);
+        },
+        // End Multiple Health
+
+        // start Multiple Wealth
+        addWealth() {
+            this.data.beneficiary_wealths.push({
+                wealth_id: "",
+                qty: "",
+                description: "",
+                ownership_year: null,
+                present_value: "",
+            });
+        },
+        deleteWealth(index) {
+            this.data.beneficiary_wealths.splice(index, 1);
+        },
+        // End Multiple Wealth
+
+        // Start Multiple Asset
+        addAsset() {
+            this.data.benificiary_assets.push({
+                asset_id: "",
+                // sourch_of_ownership:"",
+                qty: "",
+                description: "",
+                ownership_year: null,
+                present_value: "",
+            });
+        },
+
+        deleteAssets(index) {
+            this.data.benificiary_assets.splice(index, 1);
+        },
+        // End Multiple Asset
+
+        // Start Multiple Liabilities
+        addLiabilities() {
+            this.data.beneficiary_liabilites.push({
+                liability_id: "",
+                loan_from: "",
+                amount: "",
+                mortgage_asset: "",
+                start_date: "",
+                end_date: "",
+            });
+        },
+        deleteLiabilites(index) {
+            this.data.beneficiary_liabilites.splice(index, 1);
+        },
+        // End Multiple Liabilities
+       
+       
+        // getDistrictByState(id) {
+        //     if (id == null) {
+        //         this.data.district_id = null;
+        //         this.preDistricts = [];
+        //     }
+        //     this.getDistricts(id);
+        // },
+        getpreDistrictByState(id) {
+            if (id == null) {
+                this.data.pre_district_id = null;
+                this.preDistricts = [];
+            }
+            this.getpreDistricts(id);
+        },
+        getperDistrictByState(id) {
+            if (id == null) {
+                this.data.per_district_id = null;
+                this.perDistricts = [];
+            }
+            this.getperDistricts(id);
+        },
+
+        // getUpazilaByDistrict(id) {
+        //     if (id == null) {
+        //         this.data.district_id = null;
+        //         this.preUpazilla = [];
+        //     }
+        //     this.getUpazillas(id);
+        // },
+        getpreUpazilaByDistrict(id) {
+            if (id == null) {
+                this.data.district_id = null;
+                this.preUpazilla = [];
+            }
+            this.getpreUpazillas(id);
+        },
+        getperUpazilaByDistrict(id) {
+            if (id == null) {
+                this.data.district_id = null;
+                this.perUpazilla = [];
+            }
+            this.getperUpazillas(id);
+        },
+        // getStates() {
+        //     axios
+        //         .get("/get-states")
+        //         .then((res) => {
+        //             this.preStates = res.data;
+        //             this.perStates = res.data;
+        //         });
+        // },
+        getpreStates() {
+            axios
+                .get("/get-states")
+                .then((res) => {
+                    this.preStates = res.data;
+                });
+        },
+        getperStates() {
+            axios
+                .get("/get-states")
+                .then((res) => {
+                    this.perStates = res.data;
+                });
+        },
+
+        getDistricts(id) {
+            axios
+                .get("/get-districts", { params: { id: id } })
+                .then((res) => {
+                    this.preDistricts = res.data;
+                    this.perDistricts = res.data;
+                });
+        },
+        // getUpazillas(id) {
+        //     axios
+        //         .get("/get-upazilas", { params: { id: id } })
+        //         .then((res) => {
+        //             this.preUpazillas = res.data;
+        //             this.perUpazillas = res.data;
+        //         });
+        // },
+        getpreUpazillas(id) {
+            axios
+                .get("/get-upazilas", { params: { id: id } })
+                .then((res) => {
+                    this.preUpazillas = res.data;
+                });
+        },
+        getperUpazillas(id) {
+            axios
+                .get("/get-upazilas", { params: { id: id } })
+                .then((res) => {
+                    this.perUpazillas = res.data;
+                });
+        },
+
+        getpreDistricts(id) {
+            axios
+                .get("/get-districts", { params: { id: id } })
+                .then((res) => {
+                    this.preDistricts = res.data;
+                });
+        },
+        getperDistricts(id) {
+            axios
+                .get("/get-districts", { params: { id: id } })
+                .then((res) => {
+                    this.perDistricts = res.data;
+                });
+        },
+
+        getModuleData() {
+            axios.get(`${this.model}/${this.$route.params.id}`).then((res) => {
+                this.data = res.data;
+
+                // for beneficiary education tab for updateing time
+                if (Object.keys(this.data.beneficiary_educations).length < 1) {
+                    this.addEducation();
+                }
+                // for beneficiary Occupation tab for updateing time
+                if (Object.keys(this.data.beneficiary_occupations).length < 1) {
+                    this.addOcupation();
+                }
+                // for beneficiary Family tab for updateing time
+                if (Object.keys(this.data.beneficiary_family_members).length < 1) {  
+                    this.addFamily();
+                }
+                // for Beneficiary Helth in desess tab for updateing time 
+                if (Object.keys(this.data.beneficiary_diseases).length < 1) {
+                    this.addDisease();
+                }
+                // for beneficiary Wealth tab for updateing  time
+                if (Object.keys(this.data.beneficiary_wealths).length < 1) {
+                    this.addWealth();
+                }
+                if (Object.keys(this.data.benificiary_assets).length < 1) {
+                    this.addAsset();
+                }
+                // for Beneficiary Liabilities tab for updateing time 
+                if (Object.keys(this.data.beneficiary_liabilites).length < 1) {
+                    this.addLiabilities();
+                }
+
+            });
+        },
+      
+
+        getExams() {
+            axios
+                .get("/get-exams")
+                .then((res) => {
+                    this.allExams = res.data;
+                });
+        },
+        getRelations() {
+            axios
+                .get("/get-relations")
+                .then((res) => {
+                    this.allRelations = res.data;
+                });
+        },
+        getOccupations() {
+            axios
+                .get("get-occupations")
+                .then((res) => {
+                    this.allOccupations = res.data;
+                });
+        },
+        getDisease() {
+            axios
+                .get("get-diseases")
+                .then((res) => {
+                    this.allDisease = res.data;
+                });
+        },
+        getWealths() {
+            axios
+                .get("/get-wealths")
+                .then((res) => {
+                    this.allWealths = res.data;
+                });
+        },
+        getAsset() {
+            axios
+                .get("/get-assets")
+                .then((res) => {
+                    this.allAssets = res.data;
+                });
+        },
+
+        getLiabilities() {
+            axios
+                .get("/get-liabilities")
+                .then((res) => {
+                    this.allLiabilities = res.data;
+                });
+        },
+    },
+
+    created() {
+        if (this.$route.params.id) {
+            this.page_title = this.headline(this.model) + " Edit";
+            this.getModuleData();
+
+        } else {
+            this.page_title = this.headline(this.model) + " Create";
+        }
+        this.get_sorting(this.ucfirst(this.model));
+        //this.getStates();
+        this.getpreStates();
+        this.getperStates();
+        this.getExams();
+        this.getRelations();
+        this.getOccupations();
+        this.getDisease();
+        this.getWealths();
+        this.getAsset();
+        this.getLiabilities();
+    },
+
+    validators: {
+        "data.full_name": function (value = null) {
+            return Validator.value(value).required("Full  name is required");
+        },
+      "data.name_bangla": function (value = null) {
+        return Validator.value(value)
+        .required("Bangla name is required")
+        .regex(/^[\u0980-\u09FF\s]+$/, "Must contain only Bengali characters")
+        .minLength(2, "Bangla name must be at least 2 characters long")
+        .maxLength(50, "Bangla name must not exceed 50 characters");
+        },
+
+
+        "data.beneficiary_no": function (value = null) {
+            return Validator.value(value)
+                .digit();
+        },
+        "data.birth_certificate_no": function (value = null) {
+            return Validator.value(value)
+                .digit();
+            // .required("Beneficiary No Must be required");
+        },
+        "data.nid": function (value = null) {
+            return Validator.value(value)
+                .digit()
+                .required("NID is required")
+                .maxLength(13, "Invalid digit"); // Custom validation for max 13 digits
+        },
+        "data.mobile_no": function (value = null) {
+            return Validator.value(value)
+                .digit()
+                .regex("01+[0-9+-]*$", "Must start with 01.")
+                .minLength(11)
+                .maxLength(11)
+                .required("Phone is required");
+        },
+
+        "data.pre_state_id": function (value = null) {
+            return Validator.value(value).required("Present State is required");
+        },
+        "data.pre_district_id": function (value = null) {
+            return Validator.value(value).required("Present District is required");
+        },
+        "data.pre_upazilla_id": function (value = null) {
+            return Validator.value(value).required("Present Upazila is required");
+        },
+        "data.per_state_id": function (value = null) {
+            return Validator.value(value).required("Persent State is required");
+        },
+        "data.per_district_id": function (value = null) {
+            return Validator.value(value).required("Persent District is required");
+        },
+        "data.per_upazilla_id": function (value = null) {
+            return Validator.value(value).required("Persent Upazila is required");
+        },
+        "data.email": function (value = null) {
+            return Validator.value(value)
+                .email();
+        },
+
+
+        // "data.exam_id": function(value = null) {
+        //     return Validator.value(value).required("Exam is required");
+        // },
+
+
+
+    },
+
+};
+</script>

@@ -1,0 +1,253 @@
+<template>
+    <view-page :defaultTable="false">
+        <template #button>
+            <div class="btn-back position-relative">
+                <router-link class="position-absolute btn-back-pos overflow-hidden"
+                    v-if="$root.checkPermission('siteSetting.edit')" :to="{ name: 'siteSetting.edit' }">
+                    <div class="combo">
+                        <i class="fa-solid fa-edit text-white"></i>
+                        <span class="text-white">Edit </span>
+                    </div>
+                </router-link>
+            </div>
+        </template>
+        <div class="row">
+            <div class="col-lg-12">
+                <Fieldset>
+                    <template v-slot:name>Media</template>
+                    <template v-slot:content>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="media--logos">
+                                    <h4>Logo</h4>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="image--box text-center">
+                                                <img :src="data?.logo" alt="" class="img-fluid" width="170" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="media--logos">
+                                    <h4>Logo Small</h4>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="image--box text-center">
+                                                <img :src="data?.logo_small" alt="" class="img-fluid" width="170" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="media--logos">
+                                    <h4>Favicon Logo</h4>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="image--box text-center">
+                                                <img :src="data?.favicon" alt="" class="img-fluid" width="50" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </Fieldset>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <Fieldset>
+                    <template v-slot:name>Information</template>
+                    <template v-slot:content>
+                        <div class="table-responsive">
+                            <table class="table mb-0 table-striped table-bordered" style="border: 1px solid #5f65b9">
+                                <tbody>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th width="50" style="text-align: center">:</th>
+                                        <td>{{ data?.title }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Short Title</th>
+                                        <th width="50" style="text-align: center">:</th>
+                                        <td>{{ data?.short_title }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Contact Email</th>
+                                        <th width="50" style="text-align: center">:</th>
+                                        <td>{{ data?.contact_email }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Feedback Email</th>
+                                        <th width="50" style="text-align: center">:</th>
+                                        <td>{{ data?.feedback_email }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Mobile One</th>
+                                        <th width="50" style="text-align: center">:</th>
+                                        <td>{{ data?.mobile1 }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Mobile Two</th>
+                                        <th width="50" style="text-align: center">:</th>
+                                        <td>{{ data?.mobile2 }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </template>
+                </Fieldset>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <Fieldset>
+                    <template v-slot:name>Links</template>
+                    <template v-slot:content>
+                        <div class="table-responsive">
+                            <table class="table mb-0 table-striped table-bordered" style="border: 1px solid #5f65b9">
+                                <tbody>
+                                    <tr>
+                                        <th>Web</th>
+                                        <th width="50" style="text-align: center">:</th>
+                                        <td>{{ data?.web }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Facebook</th>
+                                        <th width="50" style="text-align: center">:</th>
+                                        <td>{{ data?.fb }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Twitter</th>
+                                        <th width="50" style="text-align: center">:</th>
+                                        <td>{{ data?.tw }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Linkedin</th>
+                                        <th width="50" style="text-align: center">:</th>
+                                        <td>{{ data?.ln }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Youtube</th>
+                                        <th width="50" style="text-align: center">:</th>
+                                        <td>{{ data?.yt }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </template>
+                </Fieldset>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+                <Fieldset>
+                    <template v-slot:name>Color</template>
+                    <template v-slot:content>
+                        <div class="table-responsive">
+                            <table class="table mb-0 table-striped table-bordered" style="border: 1px solid #5f65b9">
+                                <tbody>
+                                    <tr>
+                                        <th>Sidebar footer color</th>
+                                        <th width="50" style="text-align: center">:</th>
+                                        <td>{{ data?.sidebar_footer_color }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Sidebar top color</th>
+                                        <th width="50" style="text-align: center">:</th>
+                                        <td>{{ data?.sidebar_top_color }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Sidebar color</th>
+                                        <th width="50" style="text-align: center">:</th>
+                                        <td>{{ data?.sidebar_color }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Navbar color</th>
+                                        <th width="50" style="text-align: center">:</th>
+                                        <td>{{ data?.navbar_color }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Breadcrumb color</th>
+                                        <th width="50" style="text-align: center">:</th>
+                                        <td>{{ data?.breadcrumb_color }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Created at</th>
+                                        <th width="50" style="text-align: center">:</th>
+                                        <td>{{ enFormat(data?.created_at) }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Updated at</th>
+                                        <th width="45" style="text-align: center">:</th>
+                                        <td>{{ enFormat(data?.updated_at) }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </template>
+                </Fieldset>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <Fieldset>
+                    <template v-slot:name>Address</template>
+                    <template v-slot:content>
+                        <div class="table-responsive">
+                            <table class="table mb-0 table-striped table-bordered" style="border: 1px solid #5f65b9">
+                                <tbody>
+                                    <tr>
+                                        <th>Address</th>
+                                        <th width="50" style="text-align: center">:</th>
+                                        <td>{{ data?.address }}</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <div class="sub--info--block mt-2">
+                                <div class="address--maps mt-4">
+                                    <iframe :src="data?.map" width="100%" height="180px" style="border: 0"
+                                        allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </Fieldset>
+            </div>
+
+        </div>
+    </view-page>
+</template>
+
+<script>
+const model = "siteSetting";
+
+export default {
+    data() {
+        return {
+            page_title: "Site Settings",
+            model: model,
+            data: {},
+        };
+    },
+    created() {
+        // this.setBreadcrumbs(this.model, "view", "", `${this.model}.show`);
+        // await this.get_data(`${this.model}/${this.$route.params}`);
+
+        axios.get(this.model).then(res => {
+            this.data = res.data;
+        }).catch(error => {
+            console.log(error);
+            this.$toast(
+                "Something went wrong"
+            );
+            return false;
+        }).finally(() => {
+            //
+        })
+    },
+};
+</script>
